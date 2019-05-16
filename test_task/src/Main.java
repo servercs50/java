@@ -5,11 +5,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int MaxNum = scanner.nextInt();
         int amt = 0;
-            for(int i =0; amt < MaxNum; i++){
-                String StrNum = Integer.toString(i);
-                if(i % StrNum.length() == 0) {
-                    System.out.println(i);
-                    amt += 1;
+        for(int i =0; amt < MaxNum; i++){
+            String StrNum = Integer.toString(i);
+            if(i % StrNum.length() == 0) {
+                System.out.println(i);
+                amt += 1;
                 }
             }
     }
