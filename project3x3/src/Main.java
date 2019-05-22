@@ -10,13 +10,13 @@ public class Main {
     public static void main(String[] args) {
         Player playerGame = new Player();
         byte moveOfPlayers=1;
-        while (gameFinished==false) {//пока игра не закончилась - играем
+        while (gameFinished==false) {
 
             playerGame.update(gameGrid);
             moveOfPlayers=playerGame.getMoveCounter();
             if(moveOfPlayers>9) {
                 gameFinished=true;
-            }//ходов больше нет - ничья
+            }
             for (int i = 0; i < gameGrid.length; i++) {
                 for (int j = 0; j < gameGrid[i].length; j++) {
 
@@ -51,9 +51,9 @@ public class Main {
                         }//проверка на победу по диагонали
                     }
 
-                    System.out.print(gameGrid[i][j] + "\t");//вывод элемента+отступ
+                    System.out.print(gameGrid[i][j] + "\t");
                 }
-                System.out.println();//переход на новую строку для создания сетки игры
+                System.out.println();
             }
         }
 
