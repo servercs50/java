@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Player {
     String coordinates;
     char coordinateX,coordinateY;
-    byte moveCounter=1; //счетчик хода. крестики ходят по четному счетчику
+    byte moveCounter=1; 
 
 
     public byte getMoveCounter(){
@@ -20,7 +20,7 @@ public class Player {
         Scanner scannerOfPlayerMove = new Scanner(System.in);
 
 
-        coordinates=scannerOfPlayerMove.next();//заполняю строку
+        coordinates=scannerOfPlayerMove.next();
 
         if (coordinates.length()!=2) {
             System.out.println("Вы ввели не верный формат хода. Попробуйте снова (пример: a2)");
@@ -30,13 +30,13 @@ public class Player {
         coordinateX=coordinates.charAt(0);
         coordinateY=coordinates.charAt(1);
 
-        int x=0,y=0;//переменные для перевода введенных пользователем символов в числа
+        int x=0,y=0;
         switch (coordinateX){
             case 'a':x=0;break;
             case 'b':x=1;break;
             case 'c':x=2;break;
             default:System.out.println("Вы ввели не верный формат хода. Попробуйте снова (пример: a2)\n");
-                return gridOfGame;//досрочный выход из ф-ции (чтобы не пойти дальше и не записать х или о в ячейку)
+                return gridOfGame;
         }
         switch (coordinateY){
             case '1':y=0;break;
